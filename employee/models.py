@@ -8,10 +8,11 @@ class Department (models.Model):
     TODO: Armazenar qual usuário criou e modificou o grupo
     """
     name = models.CharField(max_length=80)
+    
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
-    def _str__(self):
+    def __str__(self):
         return self.name
 
 
@@ -23,6 +24,7 @@ class Employee (models.Model):
     name = models.CharField(max_length=120)
     email = models.EmailField()
     department = models.ForeignKey(Department, null=True, on_delete=models.SET_NULL)
+    
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
