@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'employee',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE = [  
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -123,8 +123,15 @@ STATIC_URL = '/static/'
 
 # Rest Settings
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAdminUser',
-    ],
+    
+    #CASO O SISTEMA PRECISE DE SEGURAÇA NAS REQUISIÇÕES REST (ambiente real)
+#    'DEFAULT_PERMISSION_CLASSES': [
+#        'rest_framework.permissions.IsAdminUser',
+#    ],
+#    'DEFAULT_AUTHENTICATION_CLASSES': (
+#        'rest_framework.authentication.BasicAuthentication',
+#        'rest_framework.authentication.SessionAuthentication',
+#    ),
+
     'PAGE_SIZE': 10
 }
