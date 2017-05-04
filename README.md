@@ -34,7 +34,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-*You can want test and see the deploy application in
+*You can test and see the deploy application in
 [this link](http://labs.mariocn.com.br)*
 
 ## Usage
